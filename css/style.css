@@ -1,0 +1,210 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html, table {
+	height: 100vh;
+}
+
+/* BODY */
+
+body {
+	background: #EEE;
+	font-family: Lato;
+	overflow: hidden;
+	height: 100vh;
+}
+body #caneva {
+	margin: 0 0 0 100%;
+	background: url("../img/landscape01-repeatable.png");
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+	box-shadow: 0 0 10px #000;
+	z-index: 0;
+}
+body .content { 
+	width: calc(100vw * 0.5);
+	height: 100vh;
+	overflow: auto;
+	margin: calc(100vh * 0.08) 40px 0 40px;
+	padding: 10px 24px calc(100vh * 0.2) 24px;
+	text-align: justify;
+	color: #111;
+	background: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+body .content:after {
+  content: "";
+  height: 200px;
+  display: block;
+}
+body .content ul {
+	margin-left: 20px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .isChrome{
+    	display: none;
+    }
+}
+@-moz-document url-prefix() {
+    .isChrome{
+        display: none;
+    }
+}
+
+.isChrome{
+	position: fixed;
+	top: 10px;
+	left: 10px;
+} 
+
+/* NAV */
+
+nav {
+	display: none;
+	position: fixed;
+	bottom: 60px;
+	left: 0;
+	min-width: 180px;
+	width: 15%;
+	max-height: calc(100vh - 60px);
+	color: #EEE;
+	background: #222;
+	box-shadow: 0 0 16px #0A0A0A;
+	z-index: 3;
+	border-right: 1px solid #0F0F0F;
+	overflow: auto;
+}
+nav ul {
+	margin-bottom: 0;
+}
+nav .title {
+	padding: 14px 8px;
+	font-size: 15px;
+}
+nav .title a {
+	display: inline;
+	padding: 0;
+}
+nav .title a:hover, nav .title a:focus {
+	text-decoration: none;
+	box-shadow: none;
+}
+nav hr {
+	border-bottom: 1px solid #0F0F0F;
+	border-top: 1px solid #3D3D3D;
+	margin: 0;
+}
+nav li {
+	width: 100%;
+}
+nav li a {
+	display: block;
+	padding: 10px 8px;
+	color: #EEE;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+nav li a:hover, nav li a:focus {
+	color: #EEE;
+	text-decoration: none;
+	box-shadow: inset 0 0 16px #0A0A0A;
+	cursor: pointer;
+}
+
+/* HOME */
+
+.home {
+	width: 100%;
+	height: calc(100vh);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	text-align: center;
+	font-size: 42px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 1px 0 #AAA, 2px 2px 0 #BBB, 3px 3px 0 #CCC, 4px 4px 0 #DDD, 2px 1px 0 #BBB, 4px 2px 0 #DDD;
+}
+.home table {
+	width: 100%;
+}
+.home tr, td {
+	width: 100%;
+	height: 100%;
+}
+.home .svg {
+	width: 100%;
+	height: 100%;
+	background: url("../img/ggcar-btn.png") no-repeat;
+	background-size: auto 100%;
+	background-position: center;
+}
+.home #svg-ggcar-door {
+	cursor: pointer;
+}
+
+/* ICONS */
+
+.cst-icons {
+	position: fixed;
+	right: 24px;
+	top: 20px;
+	font-size: 24px;
+	color: #222;
+	text-shadow: 0 0 1px #222;
+	letter-spacing: 6px;
+}
+.cst-icons-content {
+	position: absolute;
+	font-size: 24px;
+	bottom: 14px;
+	left: 18px;
+	color: #EEE;
+	text-shadow: 0 0 8px #000;
+	letter-spacing: 10px;
+	pointer-events: auto;
+}
+.cst-icons .info, .cst-icons-content .info {
+	display: inline-block;
+	cursor: pointer;
+}
+.cst-icons-content a {
+	color: #EEE;
+	cursor: pointer;
+}
+.popover {
+	width: 220px;
+	position: fixed;
+	font-size: 12px;
+}
+.pop {
+	outline: none;
+}
+
+/* WINDOW */
+
+.window {
+	width: 100%;
+	height: calc(100vh);
+	background: url("../img/window.svg"), url("../img/landscape01-front.png");
+	background-size: auto 100%, auto 100%;
+	background-repeat: no-repeat, repeat;
+	background-position: center, 0 0;
+	top: 0;
+	z-index: 2;
+	pointer-events: none
+}
+.window-absolute {
+	position: absolute;
+	left: calc(100vw);
+}
+.window-fixed {
+	position: fixed;
+	left: 0;
+}
